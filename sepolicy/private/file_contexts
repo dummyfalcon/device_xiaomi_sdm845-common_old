@@ -20,3 +20,10 @@
 
 # Power HAL
 /system/lib64/hw/power\.qcom\.so    u:object_r:vendor_file:s0
+
+# Set disk scheduler via init
+/sys/block/[^/]+/queue/scheduler                  u:object_r:sysfs_block_scheduler:s0
+
+/system/bin/fsck\.ntfs                            u:object_r:fsck_exec:s0
+/system/bin/fsck\.exfat                           u:object_r:fsck_exec:s0
+/system/bin/mount\.exfat                          u:object_r:fsck_exec:s0
